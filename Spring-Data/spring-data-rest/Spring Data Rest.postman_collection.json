@@ -1,0 +1,83 @@
+{
+	"info": {
+		"_postman_id": "645fcb09-ac90-4d41-88fe-05300acf0540",
+		"name": "Spring Data Rest",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "readUsers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/userslist",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"userslist"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "findByNomeUsers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/userslist/search/findByName?name=ernane",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"userslist",
+						"search",
+						"findByName"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "ernane"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "creatUsers",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nome\": \"teste2\",\r\n    \"email\": \"ernanegeraldo@hotmail.com\",\r\n    \"senha\": \"123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
